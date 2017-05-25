@@ -141,9 +141,8 @@ DATABASES['default'].update(db_from_env)
 
 
 AUTHENTICATION_BACKENDS = (
-   'social_core.backends.facebook.FacebookOAuth2',
-   'rest_framework_social_oauth2.backends.DjangoOAuth2',
-   'django.contrib.auth.backends.ModelBackend',
+   'social.backends.facebook.FacebookOAuth2',
+   'django.contrib.auth.backends.ModelBackend'
 )
 
 
