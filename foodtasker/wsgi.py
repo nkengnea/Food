@@ -4,7 +4,7 @@ WSGI config for foodtasker project.
 It exposes the WSGI callable as a module-level variable named ``application``.
 
 For more information on this file, see
-https://docs.djangoproject.com/en/1.11/howto/deployment/wsgi/
+https://docs.djangoproject.com/en/1.10/howto/deployment/wsgi/
 """
 
 import os
@@ -15,6 +15,8 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "foodtasker.settings")
 
 application = get_wsgi_application()
 
-#use whitenoise package to serve static files on Heroku
+
+#Use whitenoisepackage to serve static files on Heroku
+
 from whitenoise.django import DjangoWhiteNoise
 application = DjangoWhiteNoise(application)
